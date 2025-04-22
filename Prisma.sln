@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prisma.EventManagement", "Prisma.EventManagement\Prisma.EventManagement.csproj", "{9B06555A-FA98-4725-93AF-7A2783F9C31C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prisma.Metrics", "Prisma.Metrics\Prisma.Metrics.csproj", "{AFF3AB61-7647-4103-BBF3-5084EB56FC74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{9B06555A-FA98-4725-93AF-7A2783F9C31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B06555A-FA98-4725-93AF-7A2783F9C31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B06555A-FA98-4725-93AF-7A2783F9C31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF3AB61-7647-4103-BBF3-5084EB56FC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF3AB61-7647-4103-BBF3-5084EB56FC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF3AB61-7647-4103-BBF3-5084EB56FC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF3AB61-7647-4103-BBF3-5084EB56FC74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
