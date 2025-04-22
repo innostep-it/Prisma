@@ -3,7 +3,7 @@ name: Publish NuGet
 on:
   push:
     tags:
-      - 'v*.*.*'  # z. B. v1.0.0
+      - '*.*.*'  # z. B. v1.0.0
 
 jobs:
   publish:
