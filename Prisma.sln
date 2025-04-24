@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prisma.Metrics", "Prisma.Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prisma.Pagination", "Prisma.Pagination\Prisma.Pagination.csproj", "{899B7B3E-92BF-4F9B-B169-310B90ACC602}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{58E4AB3F-A74C-4BE3-B6E3-2C8EB1BC0F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prisma.EventManagement.Tests", "Prisma.EventManagement.Tests\Prisma.EventManagement.Tests.csproj", "{2A11F2AD-9511-4113-8668-3C0085F5FC9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,12 @@ Global
 		{899B7B3E-92BF-4F9B-B169-310B90ACC602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{899B7B3E-92BF-4F9B-B169-310B90ACC602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{899B7B3E-92BF-4F9B-B169-310B90ACC602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A11F2AD-9511-4113-8668-3C0085F5FC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A11F2AD-9511-4113-8668-3C0085F5FC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A11F2AD-9511-4113-8668-3C0085F5FC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A11F2AD-9511-4113-8668-3C0085F5FC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A11F2AD-9511-4113-8668-3C0085F5FC9D} = {58E4AB3F-A74C-4BE3-B6E3-2C8EB1BC0F18}
 	EndGlobalSection
 EndGlobal

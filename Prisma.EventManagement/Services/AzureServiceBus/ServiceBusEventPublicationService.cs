@@ -7,7 +7,7 @@ using Prisma.EventManagement.Configuration;
 using Prisma.EventManagement.Helper;
 using Prisma.EventManagement.Shared;
 
-namespace Prisma.EventManagement.Services.EventPublicationService;
+namespace Prisma.EventManagement.Services.AzureServiceBus;
 
 public class ServiceBusEventPublicationService(
     ILogger<ServiceBusEventPublicationService> logger,

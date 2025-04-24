@@ -1,6 +1,6 @@
 using Prisma.EventManagement.Shared;
 
-namespace Prisma.EventManagement.Services.EventPublicationService;
+namespace Prisma.EventManagement.Services;
 
 public interface IEventPublicationService
 {

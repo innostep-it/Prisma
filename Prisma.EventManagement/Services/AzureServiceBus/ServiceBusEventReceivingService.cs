@@ -8,10 +8,10 @@ using Prisma.EventManagement.Configuration;
 using Prisma.EventManagement.Helper;
 using Prisma.EventManagement.Shared;
 
-namespace Prisma.EventManagement.Services.EventReceivingService;
+namespace Prisma.EventManagement.Services.AzureServiceBus;
 
-public class EventReceivingService<TEvent>(
-    ILogger<EventReceivingService<TEvent>> logger,
+public class ServiceBusEventReceivingService<TEvent>(
+    ILogger<ServiceBusEventReceivingService<TEvent>> logger,
     IOptions<EventManagementConfiguration> configOptions,
     IServiceProvider serviceProvider,
     ServiceBusProcessor serviceBusProcessor)
