@@ -24,7 +24,9 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack --configuration Release --no-build -o ./nupkgs
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          dotnet pack --configuration Release -p:Version=$VERSION --no-build -o ./nupkgs
 
       - name: Push to NuGet
         run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
