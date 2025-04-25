@@ -13,14 +13,13 @@ namespace Prisma.EventManagement.Services.EventReceivingService;
 public class EventReceivingService<TEvent>(
     ILogger<EventReceivingService<TEvent>> logger,
     IOptions<EventManagementConfiguration> configOptions,
-    IServiceProvider serviceProvider,
-    ServiceBusProcessor serviceBusProcessor)
+    IServiceProvider serviceProvider)
     : BackgroundService
     where TEvent : BaseEvent
 {
     private readonly TimeSpan maxIdleTime = TimeSpan.FromMinutes(1);
     private DateTime lastMessageReceivedTime;
-    private ServiceBusProcessor serviceBusProcessor = serviceBusProcessor;
+    private ServiceBusProcessor serviceBusProcessor;
 
     public override async Task StartAsync(CancellationToken cancellationToken)
     {
@@ -52,7 +51,8 @@ public class EventReceivingService<TEvent>(
                 TopicInformationHelper.GetTopicInfos<TEvent>(configOptions.Value.ReceivingEventsConfiguration
                     .ReceivingEvents);
             var conString = configOptions.Value.ServiceBusConnectionString.Replace("REPLACEENTITY", topicInfos.Item1);
-            await TopicCreationHelper.CreateTopicIfNotExists(conString, topicInfos.Item1);
+            await TopicCreationHelper.CreateTopicIfNotExists(conString, topicInfos.Item1, topicInfos.Item2);
+            await TopicCreationHelper.CreateSubscriptionIfNotExists(conString, topicInfos.Item1, topicInfos.Item2);
             var client = new ServiceBusClient(conString);
             serviceBusProcessor = client.CreateProcessor(topicInfos.Item1, topicInfos.Item2, options);
         }
